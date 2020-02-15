@@ -6,7 +6,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Translation\DataCollectorTranslator;
 
 class HoneypotValidationListener implements EventSubscriberInterface
 {
@@ -15,7 +15,7 @@ class HoneypotValidationListener implements EventSubscriberInterface
     private $fieldName;
     private $errorMessage;
 
-    public function __construct(TranslatorInterface $translator = null,
+    public function __construct(DataCollectorTranslator $translator = null,
                                 $translationDomain,
                                 $fieldName,
                                 $errorMessage)
