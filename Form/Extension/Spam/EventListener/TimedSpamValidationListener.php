@@ -7,7 +7,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Translation\DataCollectorTranslator;
 
 class TimedSpamValidationListener implements EventSubscriberInterface
 {
@@ -18,7 +18,7 @@ class TimedSpamValidationListener implements EventSubscriberInterface
     private $options;
 
     public function __construct(TimedSpamProviderInterface $timeProvider,
-                                TranslatorInterface $translator = null,
+                                DataCollectorTranslator $translator = null,
                                 $translationDomain,
                                 $errorMessage,
                                 $options)
