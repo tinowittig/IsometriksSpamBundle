@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Translation\DataCollectorTranslator;
 
 class FormTypeTimedSpamExtension extends AbstractTypeExtension
 {
@@ -21,7 +21,7 @@ class FormTypeTimedSpamExtension extends AbstractTypeExtension
     private $defaults;
 
     public function __construct(TimedSpamProviderInterface $timeProvider,
-                                TranslatorInterface $translator = null,
+                                DataCollectorTranslator $translator = null,
                                 $translationDomain,
                                 array $defaults)
     {
