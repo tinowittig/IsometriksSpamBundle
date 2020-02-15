@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Component\Translation\DataCollectorTranslator;
 
 class FormTypeHoneypotExtension extends AbstractTypeExtension
 {
@@ -19,7 +19,7 @@ class FormTypeHoneypotExtension extends AbstractTypeExtension
     private $translationDomain;
     private $defaults;
 
-    public function __construct(TranslatorInterface $translator = null,
+    public function __construct(DataCollectorTranslator $translator = null,
                                 $translationDomain,
                                 array $defaults)
     {
